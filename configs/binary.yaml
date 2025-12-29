@@ -1,0 +1,14 @@
+task: binary
+target: diagnosed_diabetes
+csv_path: ./dataset/diabetes_dataset.csv
+
+feature_selection:
+  methods: [filter, wrapper, embedded]
+  k_values: [10, 15, 20, 25]
+
+split:
+  test_size: 0.2
+  random_state: 42
+  stratify: true
+
+output_dir: results/binary

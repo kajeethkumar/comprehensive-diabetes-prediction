@@ -1,0 +1,14 @@
+task: regression
+target: diabetes_risk_score
+csv_path: data/diabetes_dataset.csv
+
+feature_selection:
+  methods: [filter, wrapper, embedded]
+  k_values: [10, 15, 20, 25]
+
+split:
+  test_size: 0.2
+  random_state: 42
+  stratify: false
+
+output_dir: results/regression
